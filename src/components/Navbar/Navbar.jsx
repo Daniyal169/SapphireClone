@@ -27,18 +27,27 @@ function Navbar() {
             <div className="navUp">
                 <div className="navUpLeft">
                     <Link to={"/"}>
-                        <img src={logo} alt="Logo" />
+                        <img src={logo} alt="Logo" className="logo" />
                     </Link>
                 </div>
-                <div className="navUpMid">
+                {/* Hide input on smaller devices */}
+                <div className="navUpMid hidden lg:flex">
                     <input type="text" placeholder='FIND YOUR FAVOURITES' />
                     <CiSearch />
                 </div>
-                <div className="navUpRight">
-                    <TbTruckDelivery />
-                    <FaUserAlt />
-                    <LiaShoppingBagSolid />
+                <div className="navUpRight flex items-center">
+                    <TbTruckDelivery className="icon" />
+                    <FaUserAlt className="icon" />
+                    <LiaShoppingBagSolid className="icon" />
                 </div>
+                {/* Hamburger Menu Button */}
+                <Disclosure as="div" className="lg:hidden">
+                    {({ open }) => (
+                        <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none">
+                            {open ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
+                        </Disclosure.Button>
+                    )}
+                </Disclosure>
             </div>
 
             {/* Navbar with Disclosure component */}
@@ -48,14 +57,6 @@ function Navbar() {
                         <>
                             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-40">
                                 <div className="relative flex h-16 items-center justify-between">
-                                    {/* Logo and Toggle Button */}
-                                    <div className="flex items-center">
-
-                                        <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none lg:hidden">
-                                            {open ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
-                                        </Disclosure.Button>
-                                    </div>
-
                                     {/* Desktop Navigation Links */}
                                     <div className="hidden lg:flex flex-1 items-center justify-center">
                                         <div className="flex space-x-10">

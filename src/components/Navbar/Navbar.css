@@ -43,6 +43,11 @@
     align-items: center;
 }
 
+.navUpMid input {
+    flex: 1;
+    /* Allow input to take up remaining space */
+}
+
 .navUpMid input::placeholder {
     color: black;
     font-weight: 400;
@@ -96,11 +101,11 @@
 /* Between 768px and 600px */
 @media (max-width: 768px) {
     .navUp {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+        /* Keep items in a row */
         padding: 10px 15px;
-        height: auto;
+        height: 90px;
+        /* Maintain height */
     }
 
     .navUpLeft,
@@ -109,21 +114,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: auto;
+        /* Use auto width for flexible alignment */
         text-align: center;
     }
 
     .navUpMid {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        padding: 8px 10px;
+        display: none;
+        /* Hide the search bar */
+    }
+
+    .navUpRight {
+        margin-left: auto;
+        /* Push right icons to the right */
     }
 
     .navUpRight svg {
         height: 40px;
         width: 30px;
-        margin-top: 10px;
+        margin: 0px 5px;
     }
 
     .navLink {
@@ -131,16 +140,10 @@
     }
 }
 
-
-
 /* Between 600px and 450px */
 @media (max-width: 600px) {
     .navUpLeft img {
         width: 160px;
-    }
-
-    .navUpMid {
-        width: 85%;
     }
 
     .navUpRight svg {
@@ -164,10 +167,6 @@
         width: 180px;
     }
 
-    .navUpMid {
-        padding: 6px 8px;
-    }
-
     .navUpRight svg {
         height: 40px;
         width: 30px;
@@ -187,10 +186,6 @@
 
     .navUpLeft img {
         width: 200px;
-    }
-
-    .navUpMid {
-        padding: 5px;
     }
 
     .navUpRight svg {
