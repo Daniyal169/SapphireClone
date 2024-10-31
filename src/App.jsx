@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import HomePage from './Pages/HomePage'
+import HomePage from './Pages/HomePage.jsx'
 import Layout from './Layout'
-import WomenPage from './Pages/Women'
-import MenPage from './Pages/MenPage'
-import KidsPage from './Pages/KidsPage'
+import WomenPage from './Pages/Women.jsx'
+import MenPage from './Pages/MenPage.jsx'
+import KidsPage from './Pages/KidsPage.jsx'
 
 const router = createBrowserRouter([
   {

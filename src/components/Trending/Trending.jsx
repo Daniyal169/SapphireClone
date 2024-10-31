@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css";
 import { Autoplay } from 'swiper/modules';
 import { women } from "../../db/Data"
-import ProductBox from '../ProductBox/ProductBox';
+import ProductBox from '../ProductBox/ProductBox.jsx';
 
 function Trending() {
 

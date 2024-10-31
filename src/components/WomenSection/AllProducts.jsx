@@ -1,6 +1,6 @@
 import React from 'react'
 import { women } from "../../db/Data"
-import ProductBox from '../ProductBox/ProductBox'
+import ProductBox from '../ProductBox/ProductBox.jsx'
 import "./AllProducts.css"
 
 function AllProducts({ products }) {

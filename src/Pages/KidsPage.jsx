@@ -3,11 +3,11 @@ import new1 from "../asserts/img/new1.png"
 import new2 from "../asserts/img/new2.png"
 import new3 from "../asserts/img/new3.png"
 import new4 from "../asserts/img/new4.png"
-import PageTop from '../components/PageTop/PageTop'
-import AboutSection from '../components/AboutSection/AboutSection'
-import { kids } from "../db/Data"
-import AllProducts from '../components/WomenSection/AllProducts'
-import Filter from '../components/Filter/Filter'
+import PageTop from '../components/PageTop/PageTop.jsx'
+import AboutSection from '../components/AboutSection/AboutSection.jsx'
+import { kids } from "../db/Data.js"
+import AllProducts from '../components/WomenSection/AllProducts.jsx'
+import Filter from '../components/Filter/Filter.jsx'
 
 
 
