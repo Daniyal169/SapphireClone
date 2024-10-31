@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faTh, faThLarge, faBars } from '@fortawesome/free-solid-svg-icons';
-import "Filter.css"
+import "Filtercss.css"
 
 function Filter({ type }) {
     return (
