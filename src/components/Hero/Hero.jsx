@@ -18,7 +18,7 @@ function Hero() {
     return (
         <div className="hero">
             <Swiper
-                modules={[Autoplay, Pagination]} // Add Pagination module
+                modules={[Autoplay]} // Add Pagination module
                 loop={true}
                 slidesPerView={1}
                 centeredSlides={true}
