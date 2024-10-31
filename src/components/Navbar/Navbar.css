@@ -7,6 +7,7 @@
     top: 0;
     z-index: 1000;
     background-color: white;
+    z-index: 999;
 }
 
 .navUp {
@@ -32,9 +33,9 @@
 
 .navUpMid {
     width: 50%;
-    border: 1px solid rgb(185, 184, 184);
+    border: 1px solid rgb(228, 220, 220);
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     height: 40px;
     line-height: 18px;
     font-size: 13px;
@@ -45,6 +46,7 @@
 
 .navUpMid input {
     flex: 1;
+    border: 1ps solid rgb(204, 203, 203);
     /* Allow input to take up remaining space */
 }
 
@@ -60,7 +62,7 @@
 }
 
 .navUpRight {
-    width: 25%;
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -74,6 +76,7 @@
 
 .navLink {
     font-weight: 500;
+    padding: 20px 10px;
 }
 
 /* Responsive Styles */

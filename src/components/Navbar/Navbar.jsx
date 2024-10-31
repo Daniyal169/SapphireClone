@@ -6,94 +6,72 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { CiSearch } from "react-icons/ci";
 import { Disclosure } from '@headlessui/react';
 import { Link } from 'react-router-dom';
-import { HiMenu, HiX } from "react-icons/hi"; // Importing the hamburger and close icons
+import { HiMenu, HiX } from "react-icons/hi";
 import logo from "../../asserts/img/logo.svg";
 
 function Navbar() {
     const navigation = [
-        { name: 'WOMEN', href: '/women', current: false },
-        { name: 'MEN', href: '/men', current: true },
-        { name: 'KIDS', href: '/kids', current: false },
-        { name: 'NEW IN', href: '/', current: false },
-        { name: 'BEAUTY', href: '/kids', current: false },
-        { name: 'ACCESSORIES', href: '/', current: false },
-        { name: 'HOME', href: '/', current: false },
-        { name: 'SPECIAL OFFER', href: '/', current: false },
-        { name: 'THE EDIT', href: '/', current: false },
+        { name: 'WOMEN', href: '/women' },
+        { name: 'MEN', href: '/men' },
+        { name: 'KIDS', href: '/kids' },
+        { name: 'NEW IN', href: '/' },
+        { name: 'BEAUTY', href: '/kids' },
+        { name: 'ACCESSORIES', href: '/' },
+        { name: 'HOME', href: '/' },
+        { name: 'SPECIAL OFFER', href: '/' },
+        { name: 'THE EDIT', href: '/' },
     ];
 
     return (
-        <div className="navbar">
-            <div className="navUp">
-                <div className="navUpLeft">
-                    <Link to={"/"}>
-                        <img src={logo} alt="Logo" className="logo" />
-                    </Link>
-                </div>
-                {/* Hide input on smaller devices */}
-                <div className="navUpMid hidden lg:flex">
-                    <input type="text" placeholder='FIND YOUR FAVOURITES' />
-                    <CiSearch />
-                </div>
-                <div className="navUpRight flex items-center">
-                    <TbTruckDelivery className="icon" />
-                    <FaUserAlt className="icon" />
-                    <LiaShoppingBagSolid className="icon" />
-                </div>
-                {/* Hamburger Menu Button */}
-                <Disclosure as="div" className="lg:hidden">
-                    {({ open }) => (
-                        <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none">
-                            {open ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
-                        </Disclosure.Button>
-                    )}
-                </Disclosure>
-            </div>
+        <Disclosure as="nav" className="navbar fixed top-0 left-0 w-full z-50 bg-transparent">
+            {({ open }) => (
+                <>
+                    <div className="navUp flex items-center justify-between p-4">
+                        <Link to="/">
+                            <img src={logo} alt="Logo" className="logo h-8" />
+                        </Link>
+                        {/* Hide input on smaller devices */}
+                        <div className="navUpMid hidden lg:flex items-center">
+                            <input type="text" placeholder='FIND YOUR FAVOURITES' className="search-input" />
+                            <CiSearch />
+                        </div>
+                        <div className="navUpRight flex items-center">
+                            <TbTruckDelivery className="icon" />
+                            <FaUserAlt className="icon" />
+                            <LiaShoppingBagSolid className="icon" />
+                            <Disclosure.Button className="lg:hidden p-2">
+                                {open ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
+                            </Disclosure.Button>
+                        </div>
+                    </div>
 
-            {/* Navbar with Disclosure component */}
-            <div className="navDown">
-                <Disclosure as="nav" className="custom-navbar">
-                    {({ open }) => (
-                        <>
-                            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-40">
-                                <div className="relative flex h-16 items-center justify-between">
-                                    {/* Desktop Navigation Links */}
-                                    <div className="hidden lg:flex flex-1 items-center justify-center">
-                                        <div className="flex space-x-10">
-                                            {navigation.map((item) => (
-                                                <Link
-                                                    key={item.name}
-                                                    to={item.href}
-                                                    className="navLink"
-                                                >
-                                                    {item.name}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    {/* Mobile Menu */}
+                    <Disclosure.Panel className="lg:hidden absolute top-full left-0 w-full bg-white shadow-md">
+                        <div className="flex flex-col space-y-1 p-4">
+                            {navigation.map((item) => (
+                                <Disclosure.Button
+                                    key={item.name}
+                                    as={Link}
+                                    to={item.href}
+                                    className="block text-black hover:bg-gray-200 rounded-md p-8"
+                                >
+                                    {item.name}
+                                </Disclosure.Button>
+                            ))}
+                        </div>
+                    </Disclosure.Panel>
 
-                            {/* Mobile Menu (visible when open) */}
-                            <Disclosure.Panel className="lg:hidden">
-                                <div className="space-y-1 px-2 pb-3 pt-2">
-                                    {navigation.map((item) => (
-                                        <Disclosure.Button
-                                            key={item.name}
-                                            as={Link}
-                                            to={item.href}
-                                            className="navLink block px-3 py-2 rounded-md text-base font-medium"
-                                        >
-                                            {item.name}
-                                        </Disclosure.Button>
-                                    ))}
-                                </div>
-                            </Disclosure.Panel>
-                        </>
-                    )}
-                </Disclosure>
-            </div>
-        </div>
+                    {/* Desktop Menu */}
+                    <div className="hidden lg:flex space-x-4">
+                        {navigation.map((item) => (
+                            <Link key={item.name} to={item.href} className="navLink">
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                </>
+            )}
+        </Disclosure>
     );
 }
 
