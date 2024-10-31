@@ -14,12 +14,12 @@ function Navbar() {
         { name: 'WOMEN', href: '/women', current: false },
         { name: 'MEN', href: '/men', current: true },
         { name: 'KIDS', href: '/kids', current: false },
-        { name: 'NEW IN', href: '/new', current: false },
+        { name: 'NEW IN', href: '/', current: false },
         { name: 'BEAUTY', href: '/kids', current: false },
-        { name: 'ACCESSORIES', href: '/new', current: false },
-        { name: 'HOME', href: '/new', current: false },
-        { name: 'SPECIAL OFFER', href: '/new', current: false },
-        { name: 'THE EDIT', href: '/new', current: false },
+        { name: 'ACCESSORIES', href: '/', current: false },
+        { name: 'HOME', href: '/', current: false },
+        { name: 'SPECIAL OFFER', href: '/', current: false },
+        { name: 'THE EDIT', href: '/', current: false },
     ];
 
     return (
