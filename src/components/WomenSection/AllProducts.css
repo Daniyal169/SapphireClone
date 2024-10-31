@@ -1,0 +1,26 @@
+.allProducts {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, auto);
+    /* Default: 4 columns */
+    gap: 10px;
+    padding: 10px;
+}
+
+
+
+/* Small screens (e.g., mobile landscape) */
+@media (max-width: 930px) {
+    .allProducts {
+        grid-template-columns: repeat(2, auto);
+        /* 2 columns */
+    }
+}
+
+/* Extra small screens (e.g., mobile portrait) */
+@media (max-width: 680px) {
+    .allProducts {
+        grid-template-columns: repeat(1, auto);
+        /* 1 column */
+    }
+}

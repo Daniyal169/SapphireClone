@@ -1,0 +1,38 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+}
+
+.category h1 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(185, 184, 184);
+    margin: 0px auto;
+    margin-bottom: 30px;
+}
+
+.cateBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cateBox h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cateBox img {
+    height: 300px;
+    width: 300px;
+}
+
+.cateBoxes {
+    display: flex;
+}

@@ -1,0 +1,80 @@
+.productBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.productBox h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.productBox img {
+    height: 350px;
+    width: 300px;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.trendBoxs {
+    display: flex;
+}
+
+.productCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 15px;
+    margin-top: 10px;
+    transition: all 2s ease;
+}
+
+.proLeft {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.productTitle {
+    font-size: 18px;
+    font-weight: 600;
+    width: 80%;
+}
+
+.productSub {
+    font-weight: 400;
+}
+
+.proBtn {
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    font-weight: 600;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 8px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background-color 0.5s, opacity 0.3s;
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.productBox:hover .proBtn {
+    opacity: 1;
+}
+
+.productBox:hover img {
+    transform: scale(1.1);
+}

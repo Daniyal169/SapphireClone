@@ -1,0 +1,27 @@
+.trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.trendHead {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(185, 184, 184);
+    margin: 0px auto;
+    margin-bottom: 30px;
+}
+
+
+.trendBoxs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    width: 100%;
+    margin: 0px auto;
+}

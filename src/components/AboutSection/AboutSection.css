@@ -1,0 +1,11 @@
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0rem;
+    padding: 20px 40px;
+}
+
+.aboutSection h1 {
+    font-size: 23px;
+    font-weight: 600;
+}

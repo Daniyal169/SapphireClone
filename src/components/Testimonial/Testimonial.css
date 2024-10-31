@@ -1,0 +1,94 @@
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    background-color: #fef9e8;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.testimonial h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.testimonial h4 {
+    font-weight: 500;
+}
+
+.testBoxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.testBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.testCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    margin-top: 20px;
+}
+
+.testCont h1 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.testCont p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.testImg {
+    position: relative;
+}
+
+.testImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease;
+
+}
+
+.testBox:hover img {
+    transform: scale(1.1);
+    /* Zoom in effect */
+}
+
+.testImg svg {
+
+    position: absolute;
+    top: 10px;
+    /* left: 0; */
+    right: 10px;
+    bottom: 0;
+    z-index: 10;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}

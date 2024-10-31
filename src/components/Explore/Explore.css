@@ -1,0 +1,83 @@
+.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 0px 30px;
+    height: 80vh;
+}
+
+.explore h1 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(185, 184, 184);
+    margin: 0px auto;
+    margin-bottom: 30px;
+}
+
+.expBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease
+}
+
+.expBox h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.expBox h4 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.expBox img {
+    height: 300px;
+    width: 300px;
+    transition: all 1s ease
+}
+
+.expBoxes {
+    display: flex;
+}
+
+/* Scale up the active slide */
+.swiper-slide-active .expBox img {
+    height: 350px;
+    width: 400px;
+    /* Increase scale as needed */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    /* Optional shadow for emphasis */
+}
+
+.swiper-slide-active .expBox h2 {
+    font-size: 20px;
+    /* Increase text size */
+    font-weight: 700;
+}
+
+@media (min-width: 770px) {
+    .swiper-slide-active .expBox img {
+        height: auto;
+        /* Reset height */
+        width: auto;
+        /* Reset width */
+        box-shadow: none;
+        /* Remove shadow */
+    }
+
+    .swiper-slide-active .expBox h2 {
+        font-size: inherit;
+        /* Reset font size */
+        font-weight: normal;
+        /* Reset font weight */
+    }
+}
